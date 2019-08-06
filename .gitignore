@@ -1,0 +1,10 @@
+.vs/
+Assets/TilePaletts/
+Assets/TextMesh Pro/
+Library/
+Logs/
+obj/
+Temp/
+Assembly-CSharp.csproj
+Assembly-CSharp-Editor.csproj
+Zelda.sln
