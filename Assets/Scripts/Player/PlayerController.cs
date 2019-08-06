@@ -3,8 +3,7 @@ using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
 [RequireComponent(typeof(Animator))]
-public class PlayerController : MonoBehaviour
-{
+public class PlayerController : MonoBehaviour {
     public enum PlayerState {
         walk,
         attack,
@@ -14,8 +13,12 @@ public class PlayerController : MonoBehaviour
 
     [Header("Properties")]
     public float speed;
-    private Vector3 moveDir;
-    private Vector3 faceDir;
+    private Vector3 moveDir {
+        get; set;
+    }
+    public Vector3 faceDir {
+        get; private set;
+    }
 
     [HideInInspector]
     public string entryPoint;
@@ -90,10 +93,10 @@ public class PlayerController : MonoBehaviour
 
     /*
      * Spawning
-     */ 
+     */
     private void ShootArrow() {
         Projectile arrow = Instantiate(arrowPrefab, transform.position, Quaternion.identity);
-        arrow.Launch(Quaternion.Euler(faceDir));
+        arrow.Launch(faceDir);
     }
 
     /*
@@ -166,7 +169,7 @@ public class PlayerController : MonoBehaviour
             currentState = PlayerState.walk;
         }
     }
-    
+
     private IEnumerator Attack() {
         anim.SetTrigger(Constants.ANIM_PLAYER_attack);
         currentState = PlayerState.attack;

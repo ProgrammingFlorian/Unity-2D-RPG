@@ -83,7 +83,7 @@ public class ItemData : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
             case SlotType.Weapons:
                 return item.type == Item.ItemType.Weapon;
             case SlotType.FirstHand:
-                return item.type == Item.ItemType.Weapon;
+                return item.type == Item.ItemType.Weapon || item.type == Item.ItemType.Attack;
             case SlotType.SecondHand:
                 return true;
             case SlotType.Helmet:

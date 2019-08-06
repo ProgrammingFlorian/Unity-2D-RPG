@@ -52,11 +52,11 @@ TagManager:
   - name: Mobs
     uniqueID: 556268295
     locked: 0
-  - name: Player
-    uniqueID: 2168085461
-    locked: 0
   - name: Projectiles
     uniqueID: 698080071
+    locked: 0
+  - name: Player
+    uniqueID: 2168085461
     locked: 0
   - name: Bridges
     uniqueID: 3605668327

@@ -28,11 +28,6 @@ public class Projectile : MonoBehaviour
         rb.velocity = direction * speed;
     }
 
-    public void Launch(Quaternion direction) {
-        transform.rotation = direction;
-        rb.velocity = transform.up * speed;
-    }
-
     private void OnTriggerEnter2D(Collider2D collision) {
         Debug.Log(collision.name);
         Destroy(gameObject);

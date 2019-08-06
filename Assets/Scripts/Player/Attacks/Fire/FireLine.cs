@@ -1,8 +1,8 @@
 ﻿using UnityEngine;
 
-public class FireLine : MonoBehaviour, IAttack {
+public class FireLine {
 
-    public void Perform() {
+    public void Perform(Vector3 position, Quaternion rotation) {
         
     }
 
